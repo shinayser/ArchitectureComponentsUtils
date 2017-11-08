@@ -1,5 +1,7 @@
 package com.shinayer.sample
 
+import android.arch.lifecycle.MediatorLiveData
+import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,8 +10,9 @@ import android.os.Looper
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.TextView
-import com.shinayer.ac.utils.IntLiveData
-import com.shinayer.ac.utils.observe
+import com.shinayer.ac.utils.livedata.BooleanLiveData
+import com.shinayer.ac.utils.livedata.IntLiveData
+import com.shinayer.ac.utils.livedata.observe
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -29,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
 }
 
 class TestViewModel : ViewModel() {
@@ -41,10 +43,8 @@ class TestViewModel : ViewModel() {
 
         timer.schedule(timerTask {
 
-            Log.v("MSG", "Rodou ${System.currentTimeMillis()}")
             Handler(Looper.getMainLooper()).post {
                 id.modify { (Math.random() * 100).toInt() }
-                Log.v("MSG", "Mudou para ${id.value}")
             }
 
         }, 500, 500)
