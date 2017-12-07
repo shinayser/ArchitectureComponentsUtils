@@ -1,18 +1,14 @@
-package com.shinayer.sample
+package com.shinayser.sample
 
-import android.arch.lifecycle.MediatorLiveData
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.widget.TextView
-import com.shinayer.ac.utils.livedata.BooleanLiveData
-import com.shinayer.ac.utils.livedata.IntLiveData
-import com.shinayer.ac.utils.livedata.observe
+import com.shinayser.ac.utils.livedata.IntLiveData
+import com.shinayser.ac.utils.livedata.observe
 import java.util.*
 import kotlin.concurrent.timerTask
 

@@ -1,36 +1,36 @@
-package com.shinayer.ac.utils.livedata
+package com.shinayser.ac.utils.livedata
 
 /**
-A live data for Long values.
+A live data for Double values.
  */
-open class LongLiveData() : DefaultLiveData<Long>() {
+open class FloatLiveData() : DefaultLiveData<Float>() {
 
     init {
-        value = 0L
+        value = 0.0f
     }
 
-    constructor(defaultValue: Long) : this() {
+    constructor(defaultValue: Float) : this() {
         this.value = defaultValue
     }
 
     @JvmOverloads
-    fun increment(amount: Long = 1L): Long {
+    fun increment(amount: Float = 1.0f) : Float {
         this.value = value + amount
         return this.value
     }
 
     @JvmOverloads
-    fun decrement(amount: Long = 1L): Long {
+    fun decrement(amount: Float = 1.0f) : Float {
         this.value = value - amount
         return this.value
     }
 
-    fun multiply(amount: Long): Long {
+    fun multiply(amount: Float) : Float {
         this.value = value * amount
         return this.value
     }
 
-    fun divide(amount: Long): Long {
+    fun divide(amount: Float) : Float {
         this.value = value / amount
         return this.value
     }

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shinayer.ac.utils">
+    package="com.shinayser.ac.utils">
 
-    <application android:allowBackup="true"
-        android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
         android:supportsRtl="true"/>
 
 </manifest>

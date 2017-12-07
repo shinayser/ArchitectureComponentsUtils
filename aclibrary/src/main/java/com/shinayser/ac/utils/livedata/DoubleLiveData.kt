@@ -1,36 +1,36 @@
-package com.shinayer.ac.utils.livedata
+package com.shinayser.ac.utils.livedata
 
 /**
-A live data for integer values.
+A live data for Double values.
  */
-open class IntLiveData() : DefaultLiveData<Int>() {
+open class DoubleLiveData() : DefaultLiveData<Double>() {
 
     init {
-        value = 0
+        value = 0.0
     }
 
-    constructor(defaultValue: Int) : this() {
+    constructor(defaultValue: Double) : this() {
         this.value = defaultValue
     }
 
     @JvmOverloads
-    fun increment(amount: Int = 1): Int {
+    fun increment(amount: Double = 1.0): Double {
         this.value = value + amount
         return this.value
     }
 
     @JvmOverloads
-    fun decrement(amount: Int = 1): Int {
+    fun decrement(amount: Double = 1.0): Double {
         this.value = value - amount
         return this.value
     }
 
-    fun multiply(amount: Int): Int {
+    fun multiply(amount: Double): Double {
         this.value = value * amount
         return this.value
     }
 
-    fun divide(amount: Int): Int {
+    fun divide(amount: Double): Double {
         this.value = value / amount
         return this.value
     }

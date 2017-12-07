@@ -1,4 +1,4 @@
-package com.shinayer.ac.utils.livedata
+package com.shinayser.ac.utils.livedata
 
 /**
 A live data for Double values.
