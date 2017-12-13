@@ -8,8 +8,8 @@ android {
 //        applicationId "com.shinayer.ac.utils"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.1.2"
+        versionCode 3
+        versionName "1.1.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

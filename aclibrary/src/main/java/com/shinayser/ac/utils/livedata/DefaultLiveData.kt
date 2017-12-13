@@ -27,4 +27,9 @@ open class DefaultLiveData<T>() : MutableLiveData<T>() {
         return this.value
     }
 
+    open fun alter(block: T.() -> Unit): Unit {
+        this.value.block()
+        this.value = this.value
+    }
+
 }
