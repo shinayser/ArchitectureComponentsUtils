@@ -22,12 +22,12 @@ open class DefaultLiveData<T>() : MutableLiveData<T>() {
      * WARNING: if calling it from JAVA instead of Kotlin, be aware that the primitive live datas (IntLiveData, DoubleLiveData, FloatLiveData, LongLiveData, BooleanLiveData)
      * cannot be assign to null, so, never return null from the block function.
      */
-    open fun modify(block: (T) -> T): T {
+    open fun setValueTo(block: (T) -> T): T {
         this.value = block(this.value)
         return this.value
     }
 
-    open fun alter(block: T.() -> Unit): Unit {
+    open fun modify(block: T.() -> Unit): Unit {
         this.value.block()
         this.value = this.value
     }
