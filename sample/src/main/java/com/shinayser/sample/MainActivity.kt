@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
 import com.shinayser.ac.utils.livedata.IntLiveData
 import com.shinayser.ac.utils.livedata.observe
+import com.shinayser.ac.utils.viewmodel.modify
+import com.shinayser.ac.utils.viewmodel.setValueTo
 import java.util.*
 import kotlin.concurrent.timerTask
 
@@ -40,7 +42,7 @@ class TestViewModel : ViewModel() {
         timer.schedule(timerTask {
 
             Handler(Looper.getMainLooper()).post {
-                id.modify { (Math.random() * 100).toInt() }
+                id.setValueTo{ (Math.random() * 100).toInt() }
             }
 
         }, 500, 500)
