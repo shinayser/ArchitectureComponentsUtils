@@ -10,13 +10,23 @@ import android.support.v4.app.FragmentActivity
  * Created by denox on 11/12/2017.
  */
 inline fun <reified T : ViewModel> Fragment.getViewModel() = ViewModelProviders.of(this).get(T::class.java)
+
 inline fun <reified T : ViewModel> FragmentActivity.getViewModel() = ViewModelProviders.of(this).get(T::class.java)
 
 inline fun <T> MutableLiveData<T>.setValueTo(block: (T?) -> T) {
-    this.value = block(this.value)
+	this.value = block(this.value)
 }
 
 inline fun <T> MutableLiveData<T>.modify(block: T.() -> Unit) {
-    this.value?.block()
-    this.value = this.value
+	this.value?.block()
+	this.value = this.value
+}
+
+inline fun <T> MutableLiveData<T>.postValueTo(block: (T?) -> T) {
+	this.postValue(block(this.value))
+}
+
+inline fun <T> MutableLiveData<T>.postModify(block: T.() -> Unit) {
+	this.value?.block()
+	this.postValue(this.value)
 }
