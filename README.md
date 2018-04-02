@@ -15,7 +15,7 @@ Add to your Gradle file:
 
 Then add this to your "depedencies":
    
-    implementation 'com.github.shinayser:ArchitectureComponentsUtils:1.2.0
+    implementation 'com.github.shinayser:ArchitectureComponentsUtils:1.3.0
 
 
 # Features
