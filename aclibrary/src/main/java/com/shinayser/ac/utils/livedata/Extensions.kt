@@ -35,3 +35,4 @@ operator fun <T> MutableLiveData<T>.invoke(value: T, post: Boolean = false) {
 }
 
 operator fun <T> MutableLiveData<T>.invoke() = this.value
+operator fun <T> DefaultLiveData<T>.invoke() = this.value
