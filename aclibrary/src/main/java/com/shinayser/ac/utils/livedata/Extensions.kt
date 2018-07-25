@@ -28,7 +28,7 @@ inline fun <T> MutableLiveData<T>.postModify(block: T.() -> Unit) {
 }
 
 operator fun <T> MutableLiveData<T>.invoke(value: T, post: Boolean = false) {
-	if (post)
+	if (!post)
 		setValue(value)
 	else
 		postValue(value)
