@@ -34,5 +34,9 @@ operator fun <T> MutableLiveData<T>.invoke(value: T, post: Boolean = false) {
 		postValue(value)
 }
 
+inline operator fun <T, R> MutableLiveData<T>.invoke(lambda: T?.() -> R): R = value.lambda()
+
+inline operator fun <T, R> DefaultLiveData<T>.invoke(lambda: T.() -> R): R = value.lambda()
+
 operator fun <T> MutableLiveData<T>.invoke() = this.value
 operator fun <T> DefaultLiveData<T>.invoke() = this.value
