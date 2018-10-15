@@ -1,6 +1,6 @@
 package com.shinayser.ac.utils.livedata
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 
 /**
  *  A live data that can receive a default value on it's constructor.

@@ -1,11 +1,11 @@
 package com.shinayser.ac.utils.livedata
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 
 inline fun <T> LiveData<T>.observe(lifecycleOwner: LifecycleOwner, crossinline observer: (T?) -> Unit) {
-	this.observe(lifecycleOwner, android.arch.lifecycle.Observer { value -> observer.invoke(value) })
+	this.observe(lifecycleOwner, androidx.lifecycle.Observer { value -> observer.invoke(value) })
 }
 
 
